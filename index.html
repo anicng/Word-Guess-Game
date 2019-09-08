@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hangman</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
 <body>
 
     <!-- food from around the world theme  -->
@@ -15,31 +18,45 @@
         <h1 class="text-center">Hangman!</h1>
         <h2 class="text-center">Guess this food</h2>
     </div>
-    
-    <div>
-        <p class="text-center">Press any ket to get started</p>
+
+    <div class="row">
+
+        <div class="col-6">
+
+            <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX18440212.jpg" class="img-fluid"
+                alt="world food img">
+
+        </div>
+        <div class="col-6">
+            <div>
+                <p class="text-center">Press any ket to get started</p>
+            </div>
+            <!-- main game section  -->
+            <div>
+                <p class="text-center">Guess this word</p>
+
+                <p class="text-center" id="guess-word"></p>
+
+                <p class="text-center">Number of Guesses Remaining</p>
+
+                <p class="text-center" id="remaining-guesses"></p>
+
+                <p class="text-center">Letters already guessed</p>
+
+                <p class="text-center" id="guessed-word"></p>
+            </div>
+
+            <div>
+                <p class="text-center">Wins: <span id="wins-count"></span></p>
+
+            </div>
+        </div>
+
     </div>
 
-    <div>
-        <p class="text-center">Guess this word</p>
-
-        <p class="text-center" id="guess-word"></p>
-
-        <p class="text-center">Number of Guesses Remaining</p>
-
-        <p class="text-center" id="remaining-guesses"></p>
-
-        <p class="text-center">Letters already guessed</p>
-
-        <p class="text-center" id="guessed-word"></p>
-    </div>
-
-    <div>
-        <p class="text-center">Wins: <span id="wins-count"></span></p>
-
-    </div>
 
     <script src="assets/javascript/game.js">
     </script>
 </body>
+
 </html>
