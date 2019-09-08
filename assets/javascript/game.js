@@ -22,7 +22,9 @@
 
 
 // If remaining-guesses is >0 and currentWord completed, wins-count +1
+    // change image to match currentWord
 
 
 
 // If remaining guess =0 and word not guessed, wins-count doesn't change
+    // change image to match currentWord to reveal answer
