@@ -11,12 +11,33 @@
 <body>
 
     <!-- food from around the world theme  -->
-    <header>
-        <h1>Hangman!</h1>
-        <h2>Guess this food</h2>
-    </header>
+    <div class="jumbotron">
+        <h1 class="text-center">Hangman!</h1>
+        <h2 class="text-center">Guess this food</h2>
+    </div>
     
+    <div>
+        <p class="text-center">Press any ket to get started</p>
+    </div>
 
+    <div>
+        <p class="text-center">Guess this word</p>
+
+        <p class="text-center" id="guess-word"></p>
+
+        <p class="text-center">Number of Guesses Remaining</p>
+
+        <p class="text-center" id="remaining-guesses"></p>
+
+        <p class="text-center">Letters already guessed</p>
+
+        <p class="text-center" id="guessed-word"></p>
+    </div>
+
+    <div>
+        <p class="text-center">Wins: <span id="wins-count"></span></p>
+
+    </div>
 
     <script src="assets/javascript/game.js">
     </script>
