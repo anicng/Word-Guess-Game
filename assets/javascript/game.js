@@ -1,24 +1,37 @@
 
 
 // make a wordList for user to guess, using objects list out the word and number of letters.
-var wordList = {
-    "words":[
-        {"wordName": "popcorn", "letterCount": 7},
-        {"wordName": "sushi", "letterCount": 5}
+var wordList = [
+        {
+            "wordName": "popcorn", 
+            "letterCount": 7
+        },
+        {
+            "wordName": "sushi", 
+            "letterCount": 5
+        }
     ]
 
-}
 console.log (wordList);
+// console.log ("words length" + words.length);
+console.log ("wordListlength" + wordList.length);
 
 // make an array to store correct words?
 
 // make an array to store incorrect words?
 
+var currentWord = document.getElementById("current-word");
+var remainGuess = document.getElementById("remaining-guesses");
+var guessedLetter = document.getElementById("guessed-letter");
+var winsCount = document.getElementById("wins-count");
+
 
 // select a word in current word from wordList
     // count how many letters are in the currentWord
     // display the amount of letters in same number of _
-    var randomWord = document.getElementById("#guess-word");
+    
+
+    // print as many "_" as letterCount
 
 
 // When userInput a letter but is not in the current word...
@@ -38,7 +51,14 @@ console.log (wordList);
 // If remaining-guesses is >0 and currentWord completed, wins-count +1
     // change image to match currentWord
 
+var wins = 0;
+var guesses = 15;
 
+remainGuess.textContent = guesses;
+currentWord.textContent = "_ ".repeat(3);
+winsCount.textContent = wins;
 
 // If remaining guess =0 and word not guessed, wins-count doesn't change
     // change image to match currentWord to reveal answer
+
+
