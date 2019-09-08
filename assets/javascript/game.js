@@ -14,7 +14,7 @@ var wordList = [
 
 console.log (wordList);
 // console.log ("words length" + words.length);
-console.log ("wordListlength" + wordList.length);
+console.log ("wordListlength " + wordList.length);
 
 // make an array to store correct words?
 
@@ -31,7 +31,9 @@ var winsCount = document.getElementById("wins-count");
     // display the amount of letters in same number of _
     
 
-    // print as many "_" as letterCount
+    // choose a randome letterCount
+    var letterCount = wordList[Math.floor(Math.random() * wordList.length)].letterCount;
+    console.log = ("letterCount " + wordList[Math.floor(Math.random() * wordList.length)].letterCount);
 
 
 // When userInput a letter but is not in the current word...
@@ -55,7 +57,7 @@ var wins = 0;
 var guesses = 15;
 
 remainGuess.textContent = guesses;
-currentWord.textContent = "_ ".repeat(3);
+currentWord.textContent = "_ ".repeat(letterCount);
 winsCount.textContent = wins;
 
 // If remaining guess =0 and word not guessed, wins-count doesn't change
