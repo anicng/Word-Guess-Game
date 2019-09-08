@@ -1,5 +1,11 @@
-// make a wordList for user to guess
 
+
+// make a wordList for user to guess, using objects list out the word and number of letters.
+var wordList = {
+    popcorn: 7,
+    sushi: 5
+}
+console.log (wordList);
 
 // select a word in current word from wordList
     // count how many letters are in the currentWord
