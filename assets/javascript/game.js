@@ -2,15 +2,23 @@
 
 // make a wordList for user to guess, using objects list out the word and number of letters.
 var wordList = {
-    popcorn: 7,
-    sushi: 5
+    "words":[
+        {"wordName": "popcorn", "letterCount": 7},
+        {"wordName": "sushi", "letterCount": 5}
+    ]
+
 }
 console.log (wordList);
+
+// make an array to store correct words?
+
+// make an array to store incorrect words?
+
 
 // select a word in current word from wordList
     // count how many letters are in the currentWord
     // display the amount of letters in same number of _
-
+    var randomWord = document.getElementById("#guess-word");
 
 
 // When userInput a letter but is not in the current word...
