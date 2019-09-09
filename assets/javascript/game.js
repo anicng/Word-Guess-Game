@@ -9,6 +9,11 @@ var wordList = [
         {
             "wordName": "sushi", 
             "letterCount": 5
+        },
+
+        {
+            "wordName": "pie", 
+            "letterCount": 3
         }
     ]
 
@@ -27,13 +32,17 @@ var winsCount = document.getElementById("wins-count");
 
 
 // select a word in current word from wordList
-    // count how many letters are in the currentWord
-    // display the amount of letters in same number of _
-    
 
-    // choose a randome letterCount
-    var letterCount = wordList[Math.floor(Math.random() * wordList.length)].letterCount;
-    console.log = ("letterCount " + wordList[Math.floor(Math.random() * wordList.length)].letterCount);
+for (var i=0; i < wordList.length; i++) {
+    var aLetterCount = wordList[i].letterCount;
+    currentWord.textContent = "_ ".repeat(aLetterCount);
+}
+
+console.log ( "aLetterCount " + aLetterCount);
+
+
+// choose a randome letterCount
+// console.log ("letterCount " + wordList[wordSelect].letterCount);
 
 
 // When userInput a letter but is not in the current word...
@@ -57,7 +66,8 @@ var wins = 0;
 var guesses = 15;
 
 remainGuess.textContent = guesses;
-currentWord.textContent = "_ ".repeat(letterCount);
+// display the amount of letters in same number of _
+// currentWord.textContent = "_ ".repeat(disLetterCount);
 winsCount.textContent = wins;
 
 // If remaining guess =0 and word not guessed, wins-count doesn't change
