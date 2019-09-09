@@ -40,14 +40,18 @@ for (var i=0; i < wordList.length; i++) {
 
 console.log ( "aLetterCount " + aLetterCount);
 
-
-// choose a randome letterCount
-// console.log ("letterCount " + wordList[wordSelect].letterCount);
-
-
 // When userInput a letter but is not in the current word...
     // display the word in guessed-word
     // remaining-guesses -1
+
+    var userInput = "";
+
+    document.onkeyup = function(event) {
+        userInput = userInput +", "+ event.key;
+        guessedLetter.textContent = userInput;
+      };
+
+    //   guessedLetter.prepend(userInput);
 
 
 // When userInput a letter and it is in the current word...
