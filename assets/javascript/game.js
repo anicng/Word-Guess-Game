@@ -45,17 +45,24 @@ console.log ( "aLetterCount " + aLetterCount);
     // remaining-guesses -1
 
     var userInput = "";
+    var keysInput = [];
 
     document.onkeyup = function(event) {
-        userInput = userInput +", "+ event.key;
-        guessedLetter.textContent = userInput;
-      };
+        if (event.key.toLowerCase() !== "meta") {
+            userInput = userInput +" "+ event.key;
+            guessedLetter.textContent = userInput;
+            keysInput.push(event.key);
+            console.log ("keysInput" + keysInput);
 
-    //   guessedLetter.prepend(userInput);
+        }
+      };
 
 
 // When userInput a letter and it is in the current word...
     // swap out the corrisponding "_" with the letter userInput
+
+
+
 
 
 // Repeat for upto 15 incorrect guesses
