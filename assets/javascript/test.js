@@ -10,8 +10,7 @@
     },
 
     {
-        "wordName": ["p", "i", "e"],
-        "letterHolder": ["_ ", "_ ", "_ "],
+        "wordName": "pie",
         "letterCount": 3
     }
 ]
@@ -45,10 +44,6 @@ for (var i = 0; i < wordList.length; i++) {
     var curLetterCount = wordList[i].wordName.length;
     console.log("curLetterCount " + curLetterCount);
 
-    var curLetterHolder = wordList[i].letterHolder;
-    console.log("curLetterHolder " + wordList[i].letterHolder);
-
-
 // 2. display "_ "'s to show user how many letters are in the word
     currentWord.textContent = "_ ".repeat(curLetterCount);
 
@@ -69,12 +64,10 @@ for (var i = 0; i < wordList.length; i++) {
         }
 
     // 3. When userInput a letter and is in the current word & replace "_" with correctly guessed letter
-        
+
         if (word.includes(event.key)) {
             currentWord.textContent = event.key;
         } 
-
-
     // 4. Else, display the letter in guessedLetter & remaining-guesses -1
         else {
             currentWord.textContent = "_ ".repeat(curLetterCount);
