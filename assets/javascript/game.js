@@ -71,7 +71,7 @@ for (var i = 0; i < wordList.length; i++) {
         }
 
     // 3. When userInput a letter and is in the current word & replace "_" with correctly guessed letter
-
+        // maybe try to use .display or .visibility
         if (word.includes(event.key)) {
             correctLetters = correctLetters + " " + event.key
             currentWord.textContent = correctLetters;
