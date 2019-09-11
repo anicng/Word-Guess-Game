@@ -34,6 +34,7 @@ var keysInput = [];
 var wins = 0;
 // keep track of guesses, starts at 15
 var guesses = 15;
+var correctLetters = "";
 
 // 1. select a word in current word from wordList
 for (var i = 0; i < wordList.length; i++) {
@@ -50,11 +51,12 @@ for (var i = 0; i < wordList.length; i++) {
 
 
 // 2. display "_ "'s to show user how many letters are in the word
+    // currentWord.textContent = curLetterHolder.join(' ');   --> join doesn't work
+
     currentWord.textContent = "_ ".repeat(curLetterCount);
 
     // console.log(wordList[i].wordName.indexOf(event.key));
     // wordList.wordName.indexOf(event.key);
-
     // on key up even triggers the following
     document.onkeyup = function evenKeyFunction(event) {
         // this removes the refresh meta bug
@@ -69,16 +71,23 @@ for (var i = 0; i < wordList.length; i++) {
         }
 
     // 3. When userInput a letter and is in the current word & replace "_" with correctly guessed letter
-        
+
         if (word.includes(event.key)) {
-            currentWord.textContent = event.key;
+            correctLetters = correctLetters + " " + event.key
+            currentWord.textContent = correctLetters;
         } 
 
+        // var keyIndex = word.indexOf(event.key)
+        // console.log (keyIndex);
 
+        // if (word.includes(event.key)) {
+        //     currentWord.textContent = "_ ".replace(event.key);
+        // }
     // 4. Else, display the letter in guessedLetter & remaining-guesses -1
         else {
-            currentWord.textContent = "_ ".repeat(curLetterCount);
-            guesses --;
+
+            // currentWord.textContent = "_ ".repeat(curLetterCount);
+            --guesses;
         };
     };
 
@@ -98,8 +107,8 @@ for (var i = 0; i < wordList.length; i++) {
 
 
 
-// use wins ++ to increase win by one
-// use guesses -- to decrease guesses by one
+// use wins++ to increase win by one
+// use guesses-- to decrease guesses by one
 
 remainGuess.textContent = guesses;
 // display the amount of letters in same number of _
