@@ -63,7 +63,7 @@ for (var i = 0; i < wordList.length; i++) {
             console.log("keysInput" + keysInput);
         }
 
-    // 3. When userInput a letter that is in the current word & replace "_" with correctly guessed letter
+    // 3. When userInput a letter and is in the current word & replace "_" with correctly guessed letter
 
         if (word.includes(event.key)) {
             currentWord.textContent = event.key;
